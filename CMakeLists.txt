@@ -1,14 +1,18 @@
 cmake_minimum_required(VERSION 3.21)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
+
 project(miniwar
     LANGUAGES CXX C
     VERSION 0.1.0
 )
 
-add_subdirectory(extern/sdl2)
-add_subdirectory(extern/glew/build/cmake)
+include(Content.cmake)
 
 add_executable(miniwar
     src/main.cpp
+    src/stb_image.h
+    src/stb_image.cpp
 )
 
