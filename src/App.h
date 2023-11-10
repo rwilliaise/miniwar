@@ -27,7 +27,7 @@ public:
 private:
     std::shared_ptr<game::World> current_world;
 
-    GLFWwindow *window;   
+    GLFWwindow *window = nullptr;
     int argc;
     char **argv;
 };

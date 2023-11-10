@@ -11,8 +11,16 @@ project(miniwar
 include(Content.cmake)
 
 add_executable(miniwar
+    src/App.cpp
+    src/App.h
     src/main.cpp
-    src/stb_image.h
+    src/Nation.cpp
+    src/Nation.h
+    src/render.h
     src/stb_image.cpp
+    src/stb_image.h
+    src/World.cpp
+    src/World.h
 )
+target_link_libraries(miniwar PRIVATE glfw glew)
 
