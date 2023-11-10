@@ -21,6 +21,8 @@ add_executable(miniwar
     src/stb_image.h
     src/World.cpp
     src/World.h
+    extern/glad/src/gl.c
 )
-target_link_libraries(miniwar PRIVATE glfw glew)
+target_link_libraries(miniwar PRIVATE glfw)
+target_include_directories(miniwar PRIVATE extern/glad/include)
 
