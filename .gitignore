@@ -1,5 +1,6 @@
 
 build*
+miniwar
 
 # clangd, ccls
 .cache

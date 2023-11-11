@@ -5,6 +5,9 @@
 
 namespace miniwar {
 
+uint32_t vao;
+uint32_t vbo;
+
 App::~App() {
     glfwDestroyWindow(window);
     glfwTerminate();
@@ -23,6 +26,11 @@ int App::run() {
     if (window == nullptr) {
         return 1;
     }
+
+    glGenVertexArrays(1, &vao);
+    glGenBuffers(1, &vbo);
+
+    glfwSetWindowUserPointer(window, this);
 
     glfwMakeContextCurrent(window);
     gladLoadGL(glfwGetProcAddress);

@@ -2,6 +2,7 @@
 #ifndef MINIWAR_WORLD_H_
 #define MINIWAR_WORLD_H_
 
+#include "Map.h"
 #include "Nation.h"
 #include <cstdint>
 #include <filesystem>
@@ -19,6 +20,7 @@ public:
 private:
     uint64_t day;
     std::vector<Nation> nations;
+    std::unique_ptr<Map> map;
 
 };
 
