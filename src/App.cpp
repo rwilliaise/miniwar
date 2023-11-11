@@ -27,13 +27,13 @@ int App::run() {
         return 1;
     }
 
-    glGenVertexArrays(1, &vao);
-    glGenBuffers(1, &vbo);
-
     glfwSetWindowUserPointer(window, this);
 
     glfwMakeContextCurrent(window);
     gladLoadGL(glfwGetProcAddress);
+
+    glGenVertexArrays(1, &vao);
+    glGenBuffers(1, &vbo);
 
     while (!glfwWindowShouldClose(window)) {
         render();
